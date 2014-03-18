@@ -32,9 +32,9 @@ else:
 	USER = "jm8g08"
 	HOST = "152.78.192.83"
 	PASS = "11Neverlose"
-	REMOTE = "/home/jm8g08/temp_image_bin/"
+	REMOTE = "/home/jm8g08/public_html/temp_image_bin/"
 
-	COMMAND = "%s %s %s@%s:%s%s" % (scp, fname, USER, HOST, REMOTE, fname)
+	COMMAND = "%s %s %s@%s:%s" % (scp, fname, USER, HOST, REMOTE)
 
 	# finally RUNCMD
 	print COMMAND
