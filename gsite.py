@@ -22,7 +22,7 @@ if git:
 
 	os.system("cd /Users/jmatthews/Documents/gsite/figs/; git checkout gh-pages; git add %s; git commit -am 'Added %s'; git push origin gh-pages;" % (fname, fname) )
 
-	print "http://jhmatthews.github.io/gsite/%s" % fname
+	print "http://jhmatthews.github.io/gsite/figs/%s" % fname
 
 
 else:
