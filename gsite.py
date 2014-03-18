@@ -22,7 +22,11 @@ if git:
 
 	os.system("cd /Users/jmatthews/Documents/gsite/figs/; git checkout gh-pages; git add %s; git commit -am 'Added %s'; git push origin gh-pages;" % (fname, fname) )
 
-	print "http://jhmatthews.github.io/gsite/figs/%s" % fname
+	url = "http://jhmatthews.github.io/gsite/figs/%s" % fname
+
+	os.system("echo '%s' | pbcopy" % url)
+
+	print url
 
 
 else:
