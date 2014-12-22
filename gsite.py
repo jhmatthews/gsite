@@ -15,12 +15,15 @@ if len(sys.argv) > 2:
 	if mode != "git":
 		git = False 
 
+dir = os.path.realpath(__file__)[:-8] + "figs/"
+print dir
+
 
 if git:
 
-	os.system("cp %s /Users/jmatthews/Documents/gsite/figs/" % fname)
+	os.system("cp %s %s" % (fname, dir))
 
-	os.system("cd /Users/jmatthews/Documents/gsite/figs/; git checkout gh-pages; git add %s; git commit -am 'Added %s'; git push origin gh-pages;" % (fname, fname) )
+	os.system("cd %s; git checkout gh-pages; git add %s; git commit -am 'Added %s'; git push origin gh-pages;" % (dir, fname, fname) )
 
 	url = "http://jhmatthews.github.io/gsite/figs/%s" % fname
 
